@@ -29,6 +29,9 @@ public class User implements Serializable {
     @ApiModelProperty(value = "备注信息")
     private String note;
 
+    @ApiModelProperty(value = "等级")
+    private String level;
+
     @ApiModelProperty(value = "创建时间")
     private Date gmtCreate;
 
@@ -104,6 +107,14 @@ public class User implements Serializable {
         this.note = note;
     }
 
+    public String getLevel() {
+        return level;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
+    }
+
     public Date getGmtCreate() {
         return gmtCreate;
     }
@@ -142,6 +153,7 @@ public class User implements Serializable {
         sb.append(", icon=").append(icon);
         sb.append(", nickName=").append(nickName);
         sb.append(", note=").append(note);
+        sb.append(", level=").append(level);
         sb.append(", gmtCreate=").append(gmtCreate);
         sb.append(", gmtModified=").append(gmtModified);
         sb.append(", isDelete=").append(isDelete);
